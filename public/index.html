@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Singh - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="planet planet-1"></div>
+    <div class="planet planet-2"></div>
+    <div class="planet planet-3"></div>
+    <div class="planet planet-4"></div>
+    
+    <div class="shooting-star shooting-star-1"></div>
+    <div class="shooting-star shooting-star-2"></div>
+    <div class="shooting-star shooting-star-3"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo-group">
+                    <span class="nav-logo-text">Abhishek Singh</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                  
+                </div>
+                <h1 class="hero-title">Abhishek Singh</h1>
+                <p class="hero-subtitle">Aspiring Multi-Disciplinary Engineer</p>
+                <div class="hero-badges">
+                    <span class="badge">
+                        <i class="fas fa-code"></i>
+                        Software Developer
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-microchip"></i>
+                        Robotics Engineer
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-bolt"></i>
+                        Embedded Systems
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-globe"></i>
+                        Web Developer
+                    </span>
+                </div>
+                <p class="hero-description">
+                    Passionate about creating innovative solutions that bridge the gap between hardware and software. 
+                    From embedded systems to web applications, I love building technology that makes a difference.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://drive.google.com/file/d/12RzlO_cOCPuTsb-ZQZGlqjCvDXFgQPah/view?usp=sharing" target="_blank" class="btn btn-primary">View Resume</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="https://github.com/IAbhisek" target="_blank" class="hero-social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/abhishek-singh-803011239/" target="_blank" class="hero-social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>My Journey</h3>
+                    <p>
+                        I'm a passionate engineering student with a diverse skill set spanning multiple disciplines. 
+                        My journey began with curiosity about how things work, leading me to explore everything from 
+                        microcontrollers to machine learning algorithms.
+                    </p>
+                    <p>
+                        Currently pursuing my degree in Electronics and Communication Engineering, I've developed expertise in both hardware 
+                        and software domains. I believe the future lies in the intersection of these fields, and I'm 
+                        excited to be part of that innovation.
+                    </p>
+                    <div class="about-links">
+                        <a href="https://github.com/IAbhisek" class="btn btn-outline btn-sm">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/abhishek-singh-803011239/" class="btn btn-outline btn-sm">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="card">
+                        <i class="fas fa-code card-icon"></i>
+                        <h4>Software</h4>
+                        <p>Full-stack development</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-microchip card-icon"></i>
+                        <h4>Robotics</h4>
+                        <p>Autonomous systems</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-bolt card-icon"></i>
+                        <h4>Embedded</h4>
+                        <p>IoT & microcontrollers</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-globe card-icon"></i>
+                        <h4>Web Dev</h4>
+                        <p>Modern frameworks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project cards will be rendered here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid" id="skillsGrid">
+                <!-- Skill cards will be rendered here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume-section">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="https://drive.google.com/uc?export=download&id=12RzlO_cOCPuTsb-ZQZGlqjCvDXFgQPah" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:1.2rem; padding:1rem 2.5rem;">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h3>Let's Work Together</h3>
+                        <p>
+                            I'm always interested in new opportunities and collaborations. Whether you have a project 
+                            in mind or just want to chat about technology, feel free to reach out!
+                        </p>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1234567890" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="contact-buttons">
+                            <button type="button" class="btn btn-primary" onclick="sendViaWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                                Send via WhatsApp
+                            </button>
+                            <button type="button" class="btn btn-outline" onclick="sendViaEmail()">
+                                <i class="fas fa-envelope"></i>
+                                Send via Email
+                            </button>
+                        </div>
+                    </form>
+                    <div class="contact-links">
+                        <a href="https://wa.me/918896230050" target="_blank" class="btn btn-outline btn-sm">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                        <a href="https://github.com/IAbhisek" class="btn btn-outline btn-sm">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/abhishek-singh-803011239/" class="btn btn-outline btn-sm">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <span class="footer-text">&copy; <span id="currentYear"></span> Abhishek Singh. Built with modern web technologies.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out. I'll get back to you soon!</p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,23 @@
+{
+  "name": "abhishek-singh-portfolio",
+  "version": "1.0.0",
+  "description": "Abhishek Singh's Portfolio Website",
+  "main": "api/index.js",
+  "scripts": {
+    "build": "echo 'No build step required'"
+  },
+  "keywords": ["portfolio", "web-development", "robotics", "embedded-systems"],
+  "author": "Abhishek Singh",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "nodemailer": "^6.9.4",
+    "dotenv": "^16.3.1",
+    "node-fetch": "^2.6.7"
+  },
+
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

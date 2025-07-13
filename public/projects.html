@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects - Abhishek Singh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo-group">
+                    <a href="index.html" class="nav-logo-text">Abhishek Singh</a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">All Projects</h2>
+            <div class="projects-grid" id="allProjectsGrid">
+            </div>
+            <div style="text-align:center;margin-top:2rem;">
+                <a href="index.html" class="btn btn-outline">Back to Home</a>
+            </div>
+        </div>
+    </section>
+    <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        const grid = document.getElementById('allProjectsGrid');
+        try {
+            const response = await fetch('/api/projects');
+            const projects = await response.json();
+            grid.innerHTML = projects.map(project => `
+                <div class="project-card">
+                    <div class="project-image">
+                        ${project.image_url ? `<img src="${project.image_url}" alt="${project.title}" style="width:100%;height:180px;object-fit:cover;border-radius:10px;" />` : '<i class="fas fa-project-diagram"></i>'}
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-robot project-icon"></i>
+                            <h3 class="project-title">${project.title}</h3>
+                        </div>
+                        <p class="project-description">${project.description}</p>
+                        <div class="project-technologies">
+                            ${project.technologies.split(',').map(tech => `<span class="tech-badge">${tech.trim()}</span>`).join('')}
+                        </div>
+                        <div class="project-links">
+                            ${project.github_url ? `<a href="${project.github_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>` : ''}
+                            ${project.demo_url ? `<a href="${project.demo_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        } catch (e) {
+            grid.innerHTML = '<p>Could not load projects.</p>';
+        }
+    });
+    </script>
+</body>
+</html> 

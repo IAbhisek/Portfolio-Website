@@ -1,0 +1,11 @@
+This directory contains placeholder images for the portfolio.
+
+For production deployment, replace these with actual project images:
+- xeno-linkedin.jpg
+- task-manager.jpg  
+- weather-station.jpg
+
+You can use services like:
+- Unsplash for free stock photos
+- Your own project screenshots
+- Generated images from your projects 

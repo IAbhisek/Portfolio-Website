@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Abhishek Singh - Portfolio Website
 
 A modern, responsive portfolio website showcasing Abhishek Singh's projects and skills in software development, robotics, and embedded systems.
@@ -30,3 +31,6 @@ A modern, responsive portfolio website showcasing Abhishek Singh's projects and 
 - **GitHub**: [IAbhisek](https://github.com/IAbhisek)
 - **LinkedIn**: [Abhishek Singh](https://www.linkedin.com/in/abhishek-singh-803011239/)
 - **WhatsApp**: +91 8896230050 
+=======
+# Portfolio-Website
+>>>>>>> ade4c51724bc06a599b6e17a7f87d6d10e0607ae

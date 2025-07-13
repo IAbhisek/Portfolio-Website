@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Abhishek Singh - Portfolio Website
 
 A modern, responsive portfolio website showcasing Abhishek Singh's projects and skills in software development, robotics, and embedded systems.
@@ -7,7 +6,7 @@ A modern, responsive portfolio website showcasing Abhishek Singh's projects and 
 
 - **Modern Design**: Space-themed background with animated elements
 - **Responsive Layout**: Works perfectly on desktop, tablet, and mobile
-- **Dynamic Content**: Projects and skills loaded from database
+- **Dynamic Content**: Projects and skills loaded from the database
 - **Contact Integration**: WhatsApp and email contact options
 - **Project Showcase**: Featured projects with detailed descriptions
 - **Skills Display**: Categorized technical skills with proficiency levels
@@ -33,4 +32,3 @@ A modern, responsive portfolio website showcasing Abhishek Singh's projects and 
 - **WhatsApp**: +91 8896230050 
 =======
 # Portfolio-Website
->>>>>>> ade4c51724bc06a599b6e17a7f87d6d10e0607ae

@@ -38,7 +38,14 @@
         const grid = document.getElementById('allProjectsGrid');
         try {
             const response = await fetch('/api/projects');
+            if (!response.ok) throw new Error('Failed to load projects');
             const projects = await response.json();
+            renderProjects(projects);
+        } catch (e) {
+            renderProjectsFallback();
+        }
+
+        function renderProjects(projects) {
             grid.innerHTML = projects.map(project => `
                 <div class="project-card">
                     <div class="project-image">
@@ -60,8 +67,36 @@
                     </div>
                 </div>
             `).join('');
-        } catch (e) {
-            grid.innerHTML = '<p>Could not load projects.</p>';
+        }
+
+        function renderProjectsFallback() {
+            const fallbackProjects = [
+                {
+                    title: 'XENO Humanoid Robot',
+                    description: 'XENO is a humanoid robot built for TechExpo\'23, capable of real-time camera access, voice-based assistance, and advanced AI features. Designed and developed as a full-stack engineering project, XENO demonstrates robotics, AI, and IoT integration.',
+                    technologies: 'Python,OpenCV,Raspberry Pi,AI,IoT',
+                    category: 'Robotics',
+                    github_url: 'https://github.com/IAbhisek/xeno-robot',
+                    demo_url: 'https://www.linkedin.com/posts/abhishek-singh-803011239_xeno-humanoid-robot-techexpo23-activity-7079640730733932544-2QwF/'
+                },
+                {
+                    title: 'Smart Task Manager',
+                    description: 'A full-stack web application with AI-powered task prioritization and real-time collaboration features.',
+                    technologies: 'Next.js,TypeScript,PostgreSQL,OpenAI',
+                    category: 'Web Development',
+                    github_url: 'https://github.com/IAbhisek/task-manager',
+                    demo_url: 'https://task-manager-demo.com'
+                },
+                {
+                    title: 'IoT Weather Station',
+                    description: 'A solar-powered weather monitoring system with wireless data transmission and mobile app integration.',
+                    technologies: 'ESP32,C++,LoRaWAN,React Native',
+                    category: 'Embedded Systems',
+                    github_url: 'https://github.com/IAbhisek/weather-station',
+                    demo_url: 'https://weather-station-demo.com'
+                }
+            ];
+            renderProjects(fallbackProjects);
         }
     });
     </script>

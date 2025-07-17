@@ -10,8 +10,8 @@ const currentYearSpan = document.getElementById('currentYear');
 
 document.addEventListener('DOMContentLoaded', function() {
     setCurrentYear();
-    loadProjects();
-    loadSkills();
+    renderProjectsFallback();
+    renderSkillsFallback();
     setupEventListeners();
     setupSmoothScrolling();
     createSpaceElements();
@@ -19,33 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function setCurrentYear() {
     currentYearSpan.textContent = new Date().getFullYear();
-}
-
-async function loadProjects() {
-    try {
-        showLoading(true);
-        const response = await fetch('/api/projects');
-        if (!response.ok) throw new Error('Failed to load projects');
-        
-        projects = await response.json();
-        renderProjects();
-    } catch (error) {
-        renderProjectsFallback();
-    } finally {
-        showLoading(false);
-    }
-}
-
-async function loadSkills() {
-    try {
-        const response = await fetch('/api/skills');
-        if (!response.ok) throw new Error('Failed to load skills');
-        
-        skills = await response.json();
-        renderSkills();
-    } catch (error) {
-        renderSkillsFallback();
-    }
 }
 
 function renderProjects() {

@@ -46,30 +46,53 @@
         }
 
         function renderProjects(projects) {
-            grid.innerHTML = projects.map(project => `
-                <div class="project-card">
-                    <div class="project-image">
-                        ${project.image_url ? `<img src="${project.image_url}" alt="${project.title}" style="width:100%;height:180px;object-fit:cover;border-radius:10px;" />` : '<i class="fas fa-project-diagram"></i>'}
-                        ${project.demo_url ? `<div class="project-live-feed">
-                            <iframe src="${project.demo_url}" style="width:100%;height:300px;border-radius:10px;border:1px solid #eee;margin-top:10px;" allowfullscreen></iframe>
-                        </div>` : ''}
+            grid.innerHTML = projects.map(project => {
+                // Special handling for OS Simulator project
+                if (project.title === 'Browser Based OS Simulator') {
+                    return `
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="images/Untitled design.png" alt="Browser Based OS Simulator" style="width:100%;height:180px;object-fit:cover;border-radius:10px;" />
+                            </div>
+                            <div class="project-content">
+                                <div class="project-header">
+                                    <i class="fas fa-globe project-icon"></i>
+                                    <h3 class="project-title">${project.title}</h3>
+                                </div>
+                                <p class="project-description">${project.description}</p>
+                                <div class="project-technologies">
+                                    ${project.technologies.split(',').map(tech => `<span class="tech-badge">${tech.trim()}</span>`).join('')}
+                                </div>
+                                <div class="project-links">
+                                    ${project.github_url ? `<a href="${project.github_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+                // Default rendering for other projects
+                return `
+                    <div class="project-card">
+                        <div class="project-image">
+                            ${project.image_url ? `<img src="${project.image_url}" alt="${project.title}" style="width:100%;height:180px;object-fit:cover;border-radius:10px;" />` : '<i class="fas fa-project-diagram"></i>'}
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <i class="fas fa-robot project-icon"></i>
+                                <h3 class="project-title">${project.title}</h3>
+                            </div>
+                            <p class="project-description">${project.description}</p>
+                            <div class="project-technologies">
+                                ${project.technologies.split(',').map(tech => `<span class="tech-badge">${tech.trim()}</span>`).join('')}
+                            </div>
+                            <div class="project-links">
+                                ${project.github_url ? `<a href="${project.github_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>` : ''}
+                                ${project.demo_url ? `<a href="${project.demo_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>` : ''}
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <div class="project-header">
-                            <i class="fas fa-robot project-icon"></i>
-                            <h3 class="project-title">${project.title}</h3>
-                        </div>
-                        <p class="project-description">${project.description}</p>
-                        <div class="project-technologies">
-                            ${project.technologies.split(',').map(tech => `<span class="tech-badge">${tech.trim()}</span>`).join('')}
-                        </div>
-                        <div class="project-links">
-                            ${project.github_url ? `<a href="${project.github_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>` : ''}
-                            ${project.demo_url ? `<a href="${project.demo_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>` : ''}
-                        </div>
-                    </div>
-                </div>
-            `).join('');
+                `;
+            }).join('');
         }
 
         function renderProjectsFallback() {

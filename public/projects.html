@@ -62,7 +62,10 @@
                         </div>
                         <div class="project-links">
                             ${project.github_url ? `<a href="${project.github_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fab fa-github"></i> Code</a>` : ''}
-                            ${project.demo_url ? `<a href="${project.demo_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>` : ''}
+                            ${project.demo_url ? `<a href="${project.demo_url}" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Demo</a>
+<div class="project-live-feed">
+    <iframe src="${project.demo_url}" style="width:100%;height:300px;border-radius:10px;border:1px solid #eee;margin-top:10px;" allowfullscreen></iframe>
+</div>` : ''}
                         </div>
                     </div>
                 </div>

@@ -34,9 +34,15 @@
         </div>
     </section>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', async function() {
         const grid = document.getElementById('allProjectsGrid');
-        renderProjectsFallback();
+        try {
+            const response = await fetch('/api/projects');
+            const projects = await response.json();
+            renderProjects(projects);
+        } catch (e) {
+            renderProjectsFallback();
+        }
 
         function renderProjects(projects) {
             grid.innerHTML = projects.map(project => `

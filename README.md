@@ -28,7 +28,6 @@ A modern, responsive portfolio website showcasing Abhishek Singh's projects and 
 ## Contact
 
 - **GitHub**: [IAbhisek](https://github.com/IAbhisek)
-- **LinkedIn**: [Abhishek Singh](https://www.linkedin.com/in/abhishek-singh-803011239/)
-- **WhatsApp**: +91 8896230050 
-=======
+- # **LinkedIn**: [Abhishek Singh](https://www.linkedin.com/in/abhishek-singh-803011239/)
+
 # Portfolio-Website
